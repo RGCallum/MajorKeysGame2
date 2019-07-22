@@ -242,7 +242,7 @@ grid.addEventListener('click', function (event) {
 
             }
 
-            if (score === 5000) {
+            if (score === 12000) {
                 document.getElementById('video1').style.display = 'block';
                 document.getElementById('video1').play();
                 document.querySelector('#nextRound').style.display = 'block';
