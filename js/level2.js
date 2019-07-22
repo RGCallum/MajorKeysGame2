@@ -1,3 +1,5 @@
+document.getElementById('iGotKeys').play();
+
 const cardsArray = [
     {
         name: 'cigar',
@@ -61,6 +63,8 @@ function enableMute() {
     document.getElementById('unmute').style.backgroundColor = 'rgb(255, 255, 255, 0.8)';
     audio1.volume = 0;
     audio2.volume = 0;
+    document.getElementById('iGotKeys').pause();
+
 }
 
 function disableMute() {
@@ -69,6 +73,7 @@ function disableMute() {
     document.getElementById('mute').style.backgroundColor = 'rgb(255, 255, 255, 0.8)';
     audio1.volume = 1;
     audio2.volume = 1;
+    document.getElementById('iGotKeys').play();
 
 }
 
@@ -149,7 +154,7 @@ let restart = document.querySelector('#restart')
 start.addEventListener('click', function () {
     document.querySelector('#start').style.display = 'none';
     document.querySelector('.level1').style.display = 'block';
-
+    document.getElementById('iGotKeys').pause();
 })
 
 
