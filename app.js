@@ -19,26 +19,26 @@ const cardsArray = [
         name: 'yacht',
         img: 'img/yacht.png',
     },
-    {
-        name: 'djkJumpman',
-        img: 'img/djkJumpman.png',
-    },
-    {
-        name: 'horseback',
-        img: 'img/horseback.png',
-    },
-    {
-        name: 'cherub',
-        img: 'img/cherub.png',
-    },
-    {
-        name: 'miami',
-        img: 'img/miami.png',
-    },
-    {
-        name: 'money',
-        img: 'img/money.png',
-    },
+    // {
+    //     name: 'djkJumpman',
+    //     img: 'img/djkJumpman.png',
+    // },
+    // {
+    //     name: 'horseback',
+    //     img: 'img/horseback.png',
+    // },
+    // {
+    //     name: 'cherub',
+    //     img: 'img/cherub.png',
+    // },
+    // {
+    //     name: 'miami',
+    //     img: 'img/miami.png',
+    // },
+    // {
+    //     name: 'money',
+    //     img: 'img/money.png',
+    // },
     // {
     //     name: 'massage',
     //     img: 'img/massage.png',
@@ -142,6 +142,18 @@ function soundsWrong() {
 }
 
 
+let start = document.querySelector('#start')
+let round2 = document.querySelector('#round2')
+let restart = document.querySelector('#restart')
+
+start.addEventListener('click', function () {
+    document.querySelector('#start').style.display = 'none';
+    document.querySelector('.level1').style.display = 'block';
+
+})
+
+
+
 let firstGuess = '';
 let secondGuess = '';
 let count = 0;
@@ -149,6 +161,7 @@ let score = 0;
 let lives = 0;
 let previousTarget = null;
 let delay = 1200;
+
 
 const game = document.getElementById('game');
 const grid = document.createElement('section');
@@ -229,10 +242,26 @@ grid.addEventListener('click', function (event) {
 
             }
 
-            if (score === 12000) {
-                document.getElementById('iGotKeys').play();
+            if (score === 5000) {
+                document.getElementById('video1').style.display = 'block';
+                document.getElementById('video1').play();
+                document.querySelector('#round2').style.display = 'block';
 
-            }
+                round2.addEventListener('click', function () {
+                document.querySelector('#round2').style.display = 'none';
+                document.getElementById('video1').style.display = 'none';
+                document.getElementById('video1').pause();
+                document.querySelector('.level2').style.display = 'block';
+
+        
+        
+                })
+                            
+            } else {
+              video.pause();
+            
+                }
+            
 
         }
         previousTarget = clicked;
