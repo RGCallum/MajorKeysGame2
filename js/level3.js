@@ -108,7 +108,7 @@ function soundsRight() {
 
     }
     sound.play();
-    
+
 }
 
 
@@ -207,7 +207,7 @@ grid.addEventListener('click', function (event) {
     let clicked = event.target;
 
     if (clicked.nodeName === 'SECTION' || clicked === previousTarget || clicked.parentNode.classList.contains('selected') ||
-    clicked.parentNode.classList.contains('match')) {
+        clicked.parentNode.classList.contains('match')) {
         return;
     }
 
@@ -242,26 +242,27 @@ grid.addEventListener('click', function (event) {
 
             }
 
-            if (score === 12000) {
+            if (score === 1000) {
                 document.getElementById('video1').style.display = 'block';
+                document.querySelector('#confetti').style.display = 'block';
                 document.getElementById('video1').play();
-                document.querySelector('#nextRound').style.display = 'block';
+                document.querySelector('#restart').style.display = 'block';
+                // document.querySelector('#nextRound').style.display = 'block';
 
-                nextRound.addEventListener('click', function () {
-                document.querySelector('#nextRound').style.display = 'none';
-                document.getElementById('video1').style.display = 'none';
-                document.getElementById('video1').pause();
-                document.querySelector('.level1').style.display = 'block';
-
-        
-        
+                restart.addEventListener('click', function () {
+                    location.reload();
+                    // nextRound.addEventListener('click', function () {
+                    // document.querySelector('#nextRound').style.display = 'none';
+                    // document.getElementById('video1').style.display = 'none';
+                    // document.getElementById('video1').pause();
+                    // document.querySelector('.level1').style.display = 'block';
                 })
-                            
+
             } else {
-              video.pause();
-            
-                }
-            
+                video.pause();
+
+            }
+
 
         }
         previousTarget = clicked;
