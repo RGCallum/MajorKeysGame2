@@ -242,16 +242,17 @@ grid.addEventListener('click', function (event) {
 
             }
 
-            if (score === 5000) {
+            if (score === 1000) {
                 document.getElementById('video1').style.display = 'block';
                 document.getElementById('video1').play();
                 document.querySelector('#nextRound').style.display = 'block';
+                document.querySelector('.bkgd').style.color = 'black';
 
                 nextRound.addEventListener('click', function () {
                 document.querySelector('#nextRound').style.display = 'none';
                 document.getElementById('video1').style.display = 'none';
                 document.getElementById('video1').pause();
-                document.querySelector('.level2').style.display = 'block';
+                // document.querySelector('.bkgd').style.backgroundColor = 'black';
 
         
         
