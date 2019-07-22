@@ -8,16 +8,31 @@
 
     <title>DJ Khaled Memory Game</title>
     <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
+    <button onclick="enableMute()" id="mute" type="button">Buzzer Sound Off</button>
+    <button onclick="disableMute()" id="unmute" type="button">Buzzer Sound On</button>
+
+
+    <audio id="audio1" src="./audio/success.wav"></audio>
+    <audio id="audio2" src="./audio/buzzer.mp3"></audio>
+    <audio id="iGotKeys" src="./audio/IGotKeys3.mp3"></audio>
+
+
+    <div class="optButton" id="lifeCountID">Keys:
+        <div class="lifeCount" id="lives"></div>
+    </div>
+    <div class="optButton" id="scoreBox">Score:
+        <div class="scoreCount" id="score"></div>
+    </div>
     <div id="game">
         <section class="grid">
             <div class="card">
-            <div class="front"></div>
-            <div class="back"></div>
-          </div>
+                <div class="front"></div>
+                <div class="back"></div>
+            </div>
         </section>
     </div>
 </body>
