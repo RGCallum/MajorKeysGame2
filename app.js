@@ -51,7 +51,7 @@ const cardsArray = [
 
 
 
-let gameGrid = cardsArray.concat(cardsArray);
+const gameGrid = cardsArray.concat(cardsArray);
 gameGrid.sort(() => 0.5 - Math.random());
 
 var aud = document.getElementById('audio2');
@@ -176,7 +176,8 @@ const resetGuesses = () => {
 grid.addEventListener('click', function (event) {
     let clicked = event.target;
 
-    if (clicked.nodeName === 'SECTION' || clicked === previousTarget || clicked.parentNode.classList.contains('selected')) {
+    if (clicked.nodeName === 'SECTION' || clicked === previousTarget || clicked.parentNode.classList.contains('selected') ||
+    clicked.parentNode.classList.contains('match')) {
         return;
     }
 
