@@ -126,7 +126,7 @@ i:hover {
 }
 
 #start {
-    margin-top: 25%;
+    margin-top: 35%;
     margin-left: 45%;
     display: block;
     width: 5rem;
@@ -146,7 +146,7 @@ i:hover {
 
 #nextRound {
     z-index: 100;
-    margin-top: 25%;
+    margin-top: 35%;
     margin-left: 45%;
     position: absolute;
     width: 5rem;
@@ -165,7 +165,7 @@ i:hover {
 }
 
 #restart {
-    margin-top: 25%;
+    margin-top: 35%;
     margin-left: 45%;
     width: 5rem;
     height: 4rem;
