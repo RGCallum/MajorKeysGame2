@@ -63,7 +63,7 @@ body {
         height: 100px;
         width: 85px;
         justify-content: center;
-        flex-basis: 85px;
+        flex-basis: 100px;
 
     }
   }
