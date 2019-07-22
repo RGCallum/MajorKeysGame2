@@ -166,14 +166,25 @@ i:hover {
     position: absolute;
     width: 6rem;
     height: 4rem;
-    animation: heartbeat 2.5s ease-in-out infinite both;
+    animation: delaybtn 11s;
     border-radius: 100px;
     padding: 10px 10px 0px 10px;
     font-size: 15px;
     text-shadow: 2px 2px 2px black;
     display: none;
 }
+@keyframes delaybtn {
+    0% {
+        opacity: 0;
 
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 #nextRound:hover {
     animation-play-state: paused;
     text-shadow: 1px 1px 10px rgb(250, 250, 250);
@@ -182,6 +193,7 @@ i:hover {
 #restart {
     margin-top: 35%;
     margin-left: 45%;
+    animation: delaybtn 11s;
     width: 6rem;
     height: 4rem;
     animation: heartbeat 2.5s ease-in-out infinite both;
