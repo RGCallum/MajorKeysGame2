@@ -3,7 +3,7 @@
 }
 
 body {
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .grid {
@@ -37,6 +37,7 @@ body {
 .card, .back, .front {
     height: 150px;
     width: 130px;
+    flex-basis: 110px;
 
 }
 
@@ -61,6 +62,8 @@ body {
     .card, .back, .front {
         height: 100px;
         width: 85px;
-    
+        justify-content: center;
+        flex-basis: 70px;
+
     }
   }
