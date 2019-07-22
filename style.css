@@ -61,9 +61,9 @@ body {
   @media only screen and (max-width: 1068px) {
     .card, .back, .front {
         height: 100px;
-        width: 85px;
+        width: 70px;
         justify-content: center;
-        flex-basis: 85px;
+        flex-basis: 70px;
 
     }
   }
