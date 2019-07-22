@@ -32,10 +32,6 @@ const cardsArray = [
         img: 'img/cherub.png',
     },
     {
-        name: 'massage',
-        img: 'img/massage.png',
-    },
-    {
         name: 'miami',
         img: 'img/miami.png',
     },
@@ -43,10 +39,15 @@ const cardsArray = [
         name: 'money',
         img: 'img/money.png',
     },
-    {
-        name: 'prayerHands',
-        img: 'img/prayerHands.png',
-    },
+    // {
+    //     name: 'massage',
+    //     img: 'img/massage.png',
+    // },
+
+    // {
+    //     name: 'prayerHands',
+    //     img: 'img/prayerHands.png',
+    // },
 ];
 
 
