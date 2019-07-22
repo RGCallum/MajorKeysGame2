@@ -55,23 +55,35 @@ const cardsArray = [
 const gameGrid = cardsArray.concat(cardsArray);
 gameGrid.sort(() => 0.5 - Math.random());
 
-var aud = document.getElementById('audio2');
 
 function enableMute() {
-    aud.muted = true;
     document.getElementById('mute').style.backgroundColor = 'rgba(169, 255, 186, 0.563)';
     document.getElementById('unmute').style.backgroundColor = 'transparent';
-
+    audio1.volume = 0;
+    audio2.volume = 0;
 }
 
 function disableMute() {
-    aud.muted = false;
+    // aud.muted = false;
     document.getElementById('unmute').style.backgroundColor = 'rgba(169, 255, 186, 0.563)';
     document.getElementById('mute').style.backgroundColor = 'transparent';
+    audio1.volume = 1;
+    audio2.volume = 1;
 
 }
 
-function mySoundsSuccess() {
+function khaledOff() {
+    document.getElementById('djkoff').style.backgroundColor = 'rgba(138, 149, 213, 0.563)';
+    document.getElementById('djkon').style.backgroundColor = 'transparent';
+}
+
+function khaledOn() {
+    document.getElementById('djkon').style.backgroundColor = 'rgba(138, 149, 213, 0.563)';
+    document.getElementById('djkoff').style.backgroundColor = 'transparent';
+
+}
+
+function soundsRight() {
     var x = Math.floor((Math.random() * 6) + 1);
     var sound = new Audio();
     switch (x) {
@@ -96,9 +108,11 @@ function mySoundsSuccess() {
 
     }
     sound.play();
+    
 }
 
-function mySoundsWrong() {
+
+function soundsWrong() {
     var x = Math.floor((Math.random() * 6) + 1);
     var sound = new Audio();
     switch (x) {
@@ -123,6 +137,8 @@ function mySoundsWrong() {
 
     }
     sound.play();
+
+
 }
 
 
@@ -200,15 +216,15 @@ grid.addEventListener('click', function (event) {
                 document.getElementById("lives").innerHTML = lives + " 🗝";
                 document.getElementById("score").innerHTML = score;
                 document.getElementById('audio1').play();
-                mySoundsSuccess();
+                soundsRight();
 
 
 
             } else {
                 setTimeout(resetGuesses, delay);
                 document.getElementById('audio2').play();
-                audio2.volume = 0.2;
-                mySoundsWrong();
+                // audio2.volume = 0.2;
+                soundsWrong();
 
 
             }
