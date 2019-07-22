@@ -49,28 +49,77 @@ const cardsArray = [
   },
 ]
 
+let gameGrid = cardsArray.concat(cardsArray);
+gameGrid.sort(() => 0.5 - Math.random());
 
-const game = document.getElementById('game')
+let firstGuess = '';
+let secondGuess = '';
+let count = 0;
+let previousTarget = null;
+let delay = 1200
 
-const grid = document.createElement('section')
-grid.setAttribute('class', 'grid')
 
-game.appendChild(grid)
 
-// For each item in the cardsArray array...
-cardsArray.forEach(item => {
-    // Create a div
-    const card = document.createElement('div')
+
+const game = document.getElementById('game');
+
+const grid = document.createElement('section');
+grid.setAttribute('class', 'grid');
+game.appendChild(grid);
+
+gameGrid.forEach(item => {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.dataset.name = item.name;
+    card.style.backgroundImage = `url(${item.img})`;
+    grid.appendChild(card);
+  });
   
-    // Apply a card class to that div
-    card.classList.add('card')
+  const match = () => {
+    var selected = document.querySelectorAll('.selected')
+    selected.forEach(card => {
+      card.classList.add('match')
+    })
+  };
+
+  const resetGuesses = () => {
+    firstGuess = ''
+    secondGuess = ''
+    count = 0
   
-    // Set the data-name attribute of the div to the cardsArray name
-    card.dataset.name = item.name
+    var selected = document.querySelectorAll('.selected')
+    selected.forEach(card => {
+      card.classList.remove('selected')
+    })
+  };
+
+grid.addEventListener('click', function(event) {
+    let clicked = event.target;
+      if (clicked.nodeName === 'SECTION' || clicked === previousTarget ) {
+      return;
+    }
+
+    if (count < 2) {
+        count++;
+        if (count === 1) {
+            firstGuess = clicked.dataset.name;
+            clicked.classList.add('selected');
+          } else {
+            secondGuess = clicked.dataset.name;
+            clicked.classList.add('selected');
+          }
+          if (firstGuess !== '' && secondGuess !== '') {
+            if (firstGuess === secondGuess) {
+                setTimeout(match, delay)
+                setTimeout(resetGuesses, delay)
+              } else {
+                setTimeout(resetGuesses, delay)
+              }         
+
+          }
+          previousTarget = clicked;
+
+      }
   
-    // Apply the background image of the div to the cardsArray image
-    card.style.backgroundImage = `url(${item.img})`
-  
-    // Append the div to the grid section
-    grid.appendChild(card)
-  })
+  });
+
