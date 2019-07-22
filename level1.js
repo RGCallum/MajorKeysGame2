@@ -143,7 +143,7 @@ function soundsWrong() {
 
 
 let start = document.querySelector('#start')
-let round2 = document.querySelector('#round2')
+let nextRound = document.querySelector('#nextRound')
 let restart = document.querySelector('#restart')
 
 start.addEventListener('click', function () {
@@ -245,10 +245,10 @@ grid.addEventListener('click', function (event) {
             if (score === 5000) {
                 document.getElementById('video1').style.display = 'block';
                 document.getElementById('video1').play();
-                document.querySelector('#round2').style.display = 'block';
+                document.querySelector('#nextRound').style.display = 'block';
 
-                round2.addEventListener('click', function () {
-                document.querySelector('#round2').style.display = 'none';
+                nextRound.addEventListener('click', function () {
+                document.querySelector('#nextRound').style.display = 'none';
                 document.getElementById('video1').style.display = 'none';
                 document.getElementById('video1').pause();
                 document.querySelector('.level2').style.display = 'block';
