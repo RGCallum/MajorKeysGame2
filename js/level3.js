@@ -256,6 +256,7 @@ grid.addEventListener('click', function (event) {
                     // document.getElementById('video1').style.display = 'none';
                     // document.getElementById('video1').pause();
                     // document.querySelector('.level1').style.display = 'block';
+
                 })
 
             } else {
