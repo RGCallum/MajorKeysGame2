@@ -3,23 +3,23 @@ document.getElementById('iGotKeys').play();
 const cardsArray = [
     {
         name: 'cigar',
-        img: 'img/cigar.png',
+        img: '../img/cigar.png',
     },
     {
         name: 'beats',
-        img: 'img/beats.png',
+        img: '../img/beats.png',
     },
     {
         name: 'car',
-        img: 'img/car.png',
+        img: '../img/car.png',
     },
     {
-        name: 'blkSlides',
-        img: 'img/blkSlides.png',
+        name: 'djkJumpman',
+        img: '../img/djkJumpman.png',
     },
     {
         name: 'yacht',
-        img: 'img/yacht.png',
+        img: '../img/yacht.png',
     },
     // {
     //     name: 'djkJumpman',
@@ -64,7 +64,6 @@ function enableMute() {
     audio1.volume = 0;
     audio2.volume = 0;
     document.getElementById('iGotKeys').pause();
-
 }
 
 function disableMute() {
