@@ -1,19 +1,19 @@
 (function () {
     var questions = [{
         question: "Which team one the 2019 NBA Championship?",
-        choices: ['Golden State Warriors', "Toronto Raptors", "New York Knicks", "Cleveland Cavaliers"],
+        choices: [' Golden State Warriors', " Toronto Raptors", " New York Knicks", " Cleveland Cavaliers"],
         correctAnswer: 1
     }, {
         question: "Where did Childish Gambino get his stage name from?",
-        choices: ["Pharell", "Guava Island", "Gambino Crime Family", "WuTang Generator"],
+        choices: [" Pharell", " Guava Island", " Gambino Crime Family", " WuTang Generator"],
         correctAnswer: 3
     }, {
         question: "What NBA team went on a 17 game losing streak in the 2018-2019 season?",
-        choices: ["NY Knicks", "Atlanta Hawks", "LA Clippers", "Miami Heat"],
+        choices: [" NY Knicks", " Atlanta Hawks", " LA Clippers", "  Miami Heat"],
         correctAnswer: 0
     }, {
         question: "Who is the highest paid female musician in 2019?",
-        choices: ["Beyonce", "Katy Perry", "Taylor Swift", "Rihanna"],
+        choices: [" Beyonce", " Katy Perry", " Taylor Swift", " Rihanna"],
         correctAnswer: 3
     }, {
         question: "What is 8*8?",
@@ -115,9 +115,9 @@
 
             if (input.answer === questions.correctAnswer) {
                 document.getElementById('audio1').play();
-                console.log("wtf");
+                console.log("idk");
             }
-            
+
         }
         return radioList;
         

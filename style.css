@@ -16,8 +16,19 @@
     background-position: center center;
     height: 100vh;
 }
-
-
+nav {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* text-decoration: none; */
+}
+li{
+    list-style: none;
+    font-size: 50px;
+    text-shadow: 3px 3px 3px black;
+}
 #game {
     z-index: 100;
     /* background-image: url('./djkVids/MotivationalspeechDjKhaled.mp4'); */
@@ -101,15 +112,7 @@ margin-top: 40%;
     justify-content: space-evenly;
 }
 
-nav {
-    color: white;
-    list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    display: flex;
-    flex-direction: row;
-    text-decoration: none;
-}
+
 
 .card {
     position: relative;
