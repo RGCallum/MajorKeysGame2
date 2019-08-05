@@ -8,6 +8,8 @@
     background-size: cover;
     background-repeat-y: no-repeat;
     animation: slide2 190s linear infinite;
+    height: 900px;
+    
 }
 @keyframes slide2 {
     from { background-position: 0 0; }
@@ -43,6 +45,7 @@ li{
 #game {
     z-index: 100;
     /* background-image: url('./djkVids/MotivationalspeechDjKhaled.mp4'); */
+    margin-left: 10%;
 }
 
 video {
@@ -130,6 +133,7 @@ margin-top: 40%;
     transition: all 0.4s linear;
     transform-style: preserve-3d;
     margin: 5px;
+    
 }
 
 a {
@@ -213,7 +217,7 @@ i:hover {
     position: absolute;
     width: 6rem;
     height: 4rem;
-    animation: delaybtn 11s;
+    /* animation: delaybtn 11s; */
     border-radius: 100px;
     padding: 10px 10px 0px 10px;
     font-size: 15px;
@@ -239,11 +243,11 @@ i:hover {
 }
 
 #restart {
-    margin-top: 35%;
-    margin-left: 45%;
+    margin-top: 5%;
+    margin-left: 25%;
     animation: delaybtn 11s;
     width: 6rem;
-    height: 4rem;
+    height: 5rem;
     animation: heartbeat 2.5s ease-in-out infinite both;
     border-radius: 100px;
     padding: 10px 3px 0px 3px;
@@ -270,5 +274,11 @@ i:hover {
         background-size: cover;
         /* background-repeat: no-repeat; */
         height: 120vh;
+    }
+    #start {
+        margin-left: 40%;
+    }
+    #game{
+        margin-left: 0%;
     }
 }

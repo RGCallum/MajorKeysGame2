@@ -1,4 +1,4 @@
-// document.getElementById('iGotKeys').play();
+document.getElementById('iGotKeys').play();
 
 const cardsArray = [
     {

@@ -1,4 +1,4 @@
-// document.getElementById('iGotKeys').play();
+document.getElementById('iGotKeys').play();
 
 const cardsArray = [
     {
@@ -248,14 +248,14 @@ grid.addEventListener('click', function (event) {
             }
 
             if (score === 8000) {
-                document.getElementById('video1').style.display = 'block';
-                document.getElementById('video1').play();
+                // document.getElementById('video1').style.display = 'block';
+                // document.getElementById('video1').play();
                 document.querySelector('#nextRound').style.display = 'block';
 
                 nextRound.addEventListener('click', function () {
                 document.querySelector('#nextRound').style.display = 'none';
-                document.getElementById('video1').style.display = 'none';
-                document.getElementById('video1').pause();
+                // document.getElementById('video1').style.display = 'none';
+                // document.getElementById('video1').pause();
                 document.querySelector('.level1').style.display = 'block';
 
         
